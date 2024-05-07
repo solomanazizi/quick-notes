@@ -1,0 +1,13 @@
+@import '../../shared/styles/color.variables';
+
+input {
+  background-color: $background-color;
+  border-radius: 10px;
+  height: 35px;
+  min-width: 400px;
+  width: auto;
+  border: $control-border;
+  padding: 0 10px;
+  cursor: text;
+  margin: 10px;
+}
