@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import './InputText.scss';
 
 type Props = {
+  placeholderText: string;
+  value?: string;
   onInputChange: (newText: string) => void;
 };
 
-const InputText: React.FC<Props> = ({ onInputChange }: Props) => {
+const InputText: React.FC<Props> = ({
+  placeholderText,
+  value,
+  onInputChange,
+}: Props) => {
   const [text, setText] = useState('');
 
   const handleChange = (event: any) => {
@@ -19,7 +25,8 @@ const InputText: React.FC<Props> = ({ onInputChange }: Props) => {
       <input
         onChange={handleChange}
         type="text"
-        placeholder="Type new option here..."
+        value={value}
+        placeholder={placeholderText}
       ></input>
     </div>
   );

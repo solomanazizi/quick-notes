@@ -1,0 +1,12 @@
+@import '../../shared/styles/color.variables';
+
+.container {
+  background-color: $background-color;
+  border-radius: 10px;
+  height: auto;
+  min-width: 60px;
+  max-width: 100px;
+  border: $control-border;
+  padding: 10px;
+  margin: 10px;
+}

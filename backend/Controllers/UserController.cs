@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using backend.Services;
 using backend.Data;
 using Microsoft.AspNetCore.Mvc;
+using backend.Models;
 
 namespace backend.Controllers
 {
@@ -23,13 +24,18 @@ public UserController(AppDbContext dbContext)
 [HttpGet]
 public IActionResult GetAll()
 {
-    var users = _dbContext.Users.ToList();
+    // var users = _dbContext.Users.ToList();
+    List<User> usersMock = new List<User> {
+        new User { Id = 1, FirstName = "Soloman", LastName= "Azizi" },
+        new User { Id = 2, FirstName = "Maryam", LastName="Azizi" },
+        // Add more users as needed
+    };
 
-    if(users == null) {
+    if(usersMock == null) {
         return NotFound();
     }
 
-    return Ok(users);
+    return Ok(usersMock);
 }
 
 [HttpGet("{id}")]

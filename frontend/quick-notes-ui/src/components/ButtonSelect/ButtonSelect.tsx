@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../Button/Button';
 import { v4 as uuidv4 } from 'uuid';
 import InputText from '../InputText/InputText';
@@ -25,10 +25,6 @@ const ButtonSelect: React.FC<Props> = ({
 
   const resetOptions = (): void => {
     setSelectedButton('');
-  };
-
-  const addOption = () => {
-    console.log('add option');
   };
 
   const getNewOptionInput = () => {
@@ -68,7 +64,10 @@ const ButtonSelect: React.FC<Props> = ({
   const getAddOptionElement = (): JSX.Element => {
     return (
       <span className={styles.row}>
-        <InputText onInputChange={onInputTextChange} />
+        <InputText
+          placeholderText="Type new option here..."
+          onInputChange={onInputTextChange}
+        />
         <Button label="Done" onClick={selectNewOption} />
       </span>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../Section/Section';
 import styles from './Template.module.scss';
-import { SectionOptionsConfig } from '../../shared/types/Global.types';
+import { SectionOptionsConfig } from '../../Shared/types/Global.types';
 import { config1 } from '../../json-templates/template1';
 
 type Props = {};

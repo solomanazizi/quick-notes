@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Section.module.scss';
 import ButtonSelect from '../ButtonSelect/ButtonSelect';
-import { SectionOptionsConfig } from '../../shared/types/Global.types';
+import { SectionOptionsConfig } from '../../Shared/types/Global.types';
 import { v4 as uuidv4 } from 'uuid';
-import { FieldTypes } from '../../shared/types/Global.types';
 import Button from '../Button/Button';
-import Modal from '../Modal/Modal';
 
 type Props = {
   title: string;

@@ -1,4 +1,4 @@
-import { SectionOptionsConfig } from '../shared/types/Global.types';
+import { SectionOptionsConfig } from '../Shared/types/Global.types';
 
 export const config1: SectionOptionsConfig[] = [
   {

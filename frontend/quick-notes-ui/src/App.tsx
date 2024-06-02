@@ -1,12 +1,12 @@
-import React from 'react';
 import './App.scss';
-import Card from './components/Card/Card';
-import Template from './components/Template/Template';
+import { Outlet } from 'react-router';
+import SideNavBar from './Components/SideNavBar/SideNavBar';
 
 function App() {
   return (
     <div className="App">
-      <Template />
+      <SideNavBar />
+      <Outlet />
     </div>
   );
 }
